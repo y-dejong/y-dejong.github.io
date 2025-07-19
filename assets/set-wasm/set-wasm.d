@@ -1,0 +1,1 @@
+/home/yasper/workspace/set-wasm/target/wasm32-unknown-emscripten/release/set-wasm.js: /home/yasper/workspace/set-wasm/src/cards.rs /home/yasper/workspace/set-wasm/src/game.rs /home/yasper/workspace/set-wasm/src/graphics.rs /home/yasper/workspace/set-wasm/src/main.rs
