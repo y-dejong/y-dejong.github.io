@@ -8,18 +8,22 @@
             padding:0;
             margin: 0;
         }
-        body {
-            overflow: hidden;
-        }
+		body {
+			overflow: hidden;
+		}
+		canvas {
+			width: 100%;
+			height: 100%;
+		}
     </style>
+	<meta name="viewport" content="width=device-width">
 </head>
 
 <body>
     <canvas
         id=canvas
         oncontextmenu=event.preventDefault()
-    >
-    </canvas>
+    ></canvas>
     <script>
         function on_load() {
             const dpr = window.devicePixelRatio;
