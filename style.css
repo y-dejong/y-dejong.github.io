@@ -29,56 +29,71 @@ body {
 	text-align: center;
 	padding: 3px 5px;
 	white-space: nowrap;
+	z-index: 1;
 
 }
 
 #content {
-	width: 982px;
+	max-width: 982px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 160px;
+	padding-bottom: 128px;
 	position: relative;
-
 }
 
-#portrait {
-	width: 320px;
+#landing {
+	height: 100vh;
+	padding-top: 10vh;
+	box-sizing: border-box;
 }
+
 
 #intro-container {
-	display: inline-block;
-	width: 648px;
-	position: absolute;
-	top: 0;
+	text-align: center;
 }
 
-#intro-title {
-	height: 156px;
+a {
+	text-decoration: none;
 }
 
-#me {
-	width: 180px;
-	float: left;
-	margin-right: 64px;
-}
-h2 {
-	padding: 48px;
-	margin-top: 16px;
-	font-size: 48px;
+h1, h2, h3, h4, h5, h6 {
 	font-family: "Outfit", sans-serif;
-	font-optical-sizing: auto;
 	font-weight: 500;
 	font-style: normal;
 }
 
+h1 {
+	margin: 64px;
+	padding-top: 64px;
+	font-size: 48px;
+	font-family: "Outfit", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0;
+}
+
+h2 {
+	font-family: "Outfit", sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	margin: 32px;
+	font-style: italic;
+}
+
+h3 {
+	font-family: "Outfit", sans-serif;
+	font-weight: 500;
+	font-size: 32px;
+	margin-bottom: 0.25em;
+}
+
 p {
-	font-size: 28px;
 	font-family: "Outfit", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: 350;
 	font-style: normal;
-	/*font-size: 24px;
-	font-family: "Roboto", sans-serif;
+	font-size: 24px;
+	/*font-family: "Roboto", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: <weight>;
 	font-style: normal;
@@ -87,13 +102,14 @@ p {
 }
 
 #description {
-	display: inline-block;
-	padding-left: 64px;
-	padding-right: 64px;
+	font-size: 28px;
+	margin-left: 32px;
+	margin-right: 32px;
 	text-align: center;
 }
 
 #seemore {
+	font-size: 28px;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
@@ -118,15 +134,24 @@ p {
     }
 }
 
-#under-construction {
-	font-size: 28px;
-	font-family: "Outfit", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 350;
-	font-style: normal;
-	margin-top: 256px;
-	padding-bottom: 256px;
-	text-align: center;
+.project {
+	margin: 32px;
+}
+
+hr {
+	width: 40%;
+	margin: 64px auto;
+}
+
+.project h4 {
+	margin-top: 0;
+}
+
+.project img {
+	border-radius: 16px;
+	max-width: 90%;
+	display: block;
+	margin: auto;
 }
 
 footer {
@@ -137,4 +162,73 @@ footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+}
+
+#mobile-container {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	whitespace: nowrap;
+	justify-content: center;
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+
+#portrait-mobile {
+	width: 35%;
+	border-radius: 16px;
+	padding: 8px;
+	aspect-ratio: 1;
+	object-fit: cover;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#me-mobile {
+	width: 20%;
+}
+
+#desktop-container {
+	display: none;
+	align-items: center;
+	whitespace: nowrap;
+	justify-content: center;
+}
+
+#desktop-container #portrait {
+	position: relative;
+	width: 100%;
+}
+#desktop-container #me {
+	position: absolute;
+	width: 35%;
+	right: -35%;
+	top: 10%;
+}
+
+@media screen and (min-width: 800px) {
+	#mobile-container {
+		display: none;
+	}
+
+	#desktop-container {
+		display: inline-block;
+		position: relative;
+		max-width: 30%;
+	}
+
+	#intro-container {
+		display: inline-block;
+		max-width: 65%;
+	}
+
+	#landing {
+		padding-top: 20vh;
+	}
+
+	.project img {
+		max-height: 55vh;
+	}
 }
