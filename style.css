@@ -42,10 +42,9 @@ body {
 }
 
 #landing {
-	height: 100vh;
-	padding-top: 32px;
+	min-height: 100vh;
 	box-sizing: border-box;
-	
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -55,6 +54,12 @@ body {
 
 #intro-container {
 	text-align: center;
+	min-height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 72px;
 }
 
 a {
@@ -105,11 +110,23 @@ p {
 		"wdth" 100;*/
 }
 
+#landing p {
+	margin: 0 16px;
+}
+
 #description {
 	font-size: 28px;
 	margin-left: 32px;
 	margin-right: 32px;
 	text-align: center;
+}
+
+
+
+.fa {
+	color: #262626;
+	font-size: 32px !important;
+	margin: 0 16px;
 }
 
 #seemore {
@@ -175,15 +192,13 @@ footer {
 	align-items: center;
 	whitespace: nowrap;
 	justify-content: center;
-	margin-top: 64px;
-	margin-bottom: 64px;
 }
 
 
 #portrait-mobile {
 	width: 35%;
 	border-radius: 16px;
-	padding: 8px;
+	padding-right: 8px;
 	aspect-ratio: 1;
 	object-fit: cover;
 	overflow: hidden;
@@ -196,7 +211,6 @@ footer {
 
 #desktop-container {
 	display: none;
-	align-items: center;
 	whitespace: nowrap;
 	justify-content: center;
 }
@@ -204,12 +218,13 @@ footer {
 #desktop-container #portrait {
 	position: relative;
 	width: 100%;
+	border-radius: 16px;
 }
 #desktop-container #me {
 	position: absolute;
 	width: 35%;
 	right: -35%;
-	top: 10%;
+	top: 40%;
 }
 
 @media screen and (min-width: 800px) {
@@ -224,13 +239,18 @@ footer {
 	}
 
 	#intro-container {
-		display: inline-block;
+		display: inline-flex;
 		max-width: 65%;
+		min-height: unset;
+	}
+
+	#intro-container p {
+		margin: 16px;
 	}
 
 	#landing {
-		display: block;
-		padding-top: 20vh;
+		flex-direction: row;
+		padding-top: 0;
 	}
 
 	.project img {
