@@ -111,7 +111,7 @@ p {
 }
 
 #landing p {
-	margin: 0 16px;
+	margin: 0 32px;
 }
 
 #description {
@@ -198,7 +198,7 @@ footer {
 #portrait-mobile {
 	width: 35%;
 	border-radius: 16px;
-	padding-right: 8px;
+	margin-right: 8px;
 	aspect-ratio: 1;
 	object-fit: cover;
 	overflow: hidden;
